@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+  }
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: rgb(140, 92, 252);
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px;
+    background-color: rgb(56, 56, 236);
+}
+
+.formulaire{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+
+.formulaire__grille, .formulaire__pixel {
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(56, 56, 236);
+    width: 150px;
+    text-align: center;
+    border: solid 3px white;
+}
+
+.formulaire__grille::placeholder, .formulaire__pixel::placeholder {
+    font-size: 18px;
+    color: rgb(140, 92, 252);
+    font-weight: normal;
+    text-align: start;
+}
+
+/*Permet d'enlever le border focus des inputs*/
+input:focus {
+    outline:  none;
+}
+
+.formulaire__grille{
+    border-radius: 8px 0px 0px 8px;
+}
+
+.formulaire__bouton{
+    background-color: rgb(140, 92, 252);
+    border-radius: 0px 8px 8px 0px;
+    color: azure;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    padding: 12px 25px;
+    border: solid 3px white;
+    transition: 500ms ease-in-out;
+
+    &:hover{
+        transition: 500ms ease-in-out;
+        background-color: rgb(181, 149, 255);
+    }
+}
