@@ -1,3 +1,5 @@
+/* GLOBAL */
+
 * {
     box-sizing: border-box;
   }
@@ -16,6 +18,17 @@ header{
     padding: 50px 0px;
     background-color: rgb(56, 56, 236);
 }
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+}
+
+
+
+/* FORMULAIRE */
 
 .formulaire{
     display: flex;
@@ -65,4 +78,21 @@ input:focus {
         transition: 500ms ease-in-out;
         background-color: rgb(181, 149, 255);
     }
+}
+
+
+/* GRILLE */
+
+.grille{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grille__pixels{
+    width: 20px;
+    height: 20px;
+    background-color: beige;
+    border: solid 1px black;
 }
