@@ -26,8 +26,6 @@ main{
     height: 70%;
 }
 
-
-
 /* FORMULAIRE */
 
 .formulaire{
@@ -95,4 +93,8 @@ input:focus {
     height: 20px;
     background-color: beige;
     border: solid 1px black;
+}
+
+.red-pixel{
+    background-color: rgb(184, 6, 6);
 }
