@@ -20,6 +20,7 @@ const createForm = () => {
     inputElementGrid.placeholder = 'Taille de la grille';
     inputElementPixel.placeholder = 'Taille des pixel';
     buttonElementForm.textContent = 'Valider';
+    buttonElementForm.type = 'submit';
 
     headerElement.append(FormElement);
     FormElement.append(inputElementGrid, inputElementPixel, buttonElementForm);
@@ -52,6 +53,8 @@ for (let i = 0; i < infoGrid.column; i++) {
     }
 }
 
+// Fonction du changement de couleur au clic
+
 const changeColor = () => {
     const pixelsElements = document.querySelectorAll('.grille__pixels');
     console.log(pixelsElements)
@@ -68,9 +71,23 @@ changeColor();
 
 
 // VALEUR DES INPUTS 
-
-/*
 const columnInputValue = document.querySelector('.formulaire__grille').value;
 
 console.log(columnInputValue);
-*/
+
+// Le clic du bouton Valider
+
+const buttonElementFormForInput = document.querySelector('.formulaire__bouton');
+
+const form = document.querySelector('form');
+
+form.addEventListener('submit', (e) => {
+
+    if(inputElementGrid.value === ""){
+        e.preventDefault();
+    } else if (inputElementGrid.value === !isNaN){
+        
+    }
+})
+
+
