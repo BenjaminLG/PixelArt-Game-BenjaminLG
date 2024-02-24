@@ -52,12 +52,20 @@ for (let i = 0; i < infoGrid.column; i++) {
     }
 }
 
+const changeColor = () => {
+    const pixelsElements = document.querySelectorAll('.grille__pixels');
+    console.log(pixelsElements)
+    
+    pixelsElements.forEach((pixelElement) => {
+        pixelElement.addEventListener('click', () => {
+            console.log("Le click fonctionne");
+            pixelElement.classList.toggle('red-pixel');
+        });
+    });
+}
 
-const pixelElement = document.querySelector('.grille__pixels');
+changeColor();
 
-pixelElement.addEventListener('click', () => {
-    pixelElement.classList.toggle('red-pixel');
-})
 
 // VALEUR DES INPUTS 
 
