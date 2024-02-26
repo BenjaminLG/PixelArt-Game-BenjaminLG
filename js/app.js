@@ -39,55 +39,59 @@ const infoGrid = {
 
 
 
-const mainElement = document.querySelector('main');
-
-for (let i = 0; i < infoGrid.column; i++) {
-    const sectionElementGrid = document.createElement('section');
-    sectionElementGrid.className = ('grille');
-    mainElement.append(sectionElementGrid);
-
-    for (let i = 0; i < infoGrid.pixel; i++) {
-        const divElementPixel = document.createElement('div');
-        divElementPixel.className = ('grille__pixels');
-        sectionElementGrid.append(divElementPixel);
-    }
-}
-
-// Fonction du changement de couleur au clic
-
-const changeColor = () => {
-    const pixelsElements = document.querySelectorAll('.grille__pixels');
-    console.log(pixelsElements)
-    
-    pixelsElements.forEach((pixelElement) => {
-        pixelElement.addEventListener('click', () => {
-            console.log("Le click fonctionne");
-            pixelElement.classList.toggle('red-pixel');
-        });
-    });
-}
-
-changeColor();
-
-
 // VALEUR DES INPUTS 
-const columnInputValue = document.querySelector('.formulaire__grille').value;
-
-console.log(columnInputValue);
-
 // Le clic du bouton Valider
 
 const buttonElementFormForInput = document.querySelector('.formulaire__bouton');
-
 const form = document.querySelector('form');
+
 
 form.addEventListener('submit', (e) => {
 
-    if(inputElementGrid.value === ""){
-        e.preventDefault();
-    } else if (inputElementGrid.value === !isNaN){
-        
-    }
+    e.preventDefault();
+    const columnInputValue = document.querySelector('.formulaire__grille').value;
+
+    infoGrid.column = parseInt(columnInputValue);
+    infoGrid.pixel = parseInt(columnInputValue);
+
+    console.log(`la valeur de la grille est de : ${columnInputValue}`);
+    
+    recreateGrid();
+    
 })
 
+// CREATION DE LA GRILLE
 
+const mainElement = document.querySelector('main');
+
+const recreateGrid = () => {
+    mainElement.innerHTML = ''; // Efface la grille existante
+
+    for (let i = 0; i < infoGrid.column; i++) {
+        const sectionElementGrid = document.createElement('section');
+        sectionElementGrid.className = 'grille';
+        mainElement.append(sectionElementGrid);
+
+        for (let j = 0; j < infoGrid.pixel; j++) {
+            const divElementPixel = document.createElement('div');
+            divElementPixel.className = 'grille__pixels';
+            sectionElementGrid.append(divElementPixel);
+        }
+    }
+
+    // Fonction du changement de couleur au clic
+
+    const changeColor = () => {
+        const pixelsElements = document.querySelectorAll('.grille__pixels');
+        console.log(pixelsElements)
+        
+        pixelsElements.forEach((pixelElement) => {
+            pixelElement.addEventListener('click', () => {
+                console.log("Le click fonctionne");
+                pixelElement.classList.toggle('red-pixel');
+            });
+        });
+    }
+    
+    changeColor();
+}
