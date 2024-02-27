@@ -2,30 +2,32 @@ console.log('DeViosaure 4ever !!')
 
 // CREATION DU FORMULAIRE
 const createForm = () => {
-    const headerElement = document.querySelector('header');
-    const formElement = document.createElement('form');
-    const inputElementGrid = document.createElement('input');
-    const inputElementPixel = document.createElement('input');
-    const buttonElementForm = document.createElement('button');
+    const createHeaderElement = document.querySelector('header');
+    const createFormElement = document.createElement('form');
+    const createInputElementGrid = document.createElement('input');
+    const createInputElementPixel = document.createElement('input');
+    const createButtonElementForm = document.createElement('button');
+    
 
-    formElement.className = ('formulaire');
-    inputElementGrid.className = ('formulaire__grille');
-    inputElementPixel.className = ('formulaire__pixel');
-    buttonElementForm.className = ('formulaire__bouton');
+    createFormElement.className = ('formulaire');
+    createInputElementGrid.className = ('formulaire__grille');
+    createInputElementPixel.className = ('formulaire__pixel');
+    createButtonElementForm.className = ('formulaire__bouton');
+    
 
-    inputElementGrid.placeholder = 'Taille de la grille';
-    inputElementPixel.placeholder = 'Taille des pixels';
-    buttonElementForm.textContent = 'Valider';
-    buttonElementForm.type = 'submit';
+    createInputElementGrid.placeholder = 'Taille de la grille';
+    createInputElementPixel.placeholder = 'Taille des pixels';
+    createButtonElementForm.textContent = 'Valider';
+    createButtonElementForm.type = 'submit';
 
-    headerElement.append(formElement);
-    formElement.append(inputElementGrid, inputElementPixel, buttonElementForm);
+    createHeaderElement.append(createFormElement);
+    createFormElement.append(createInputElementGrid, createInputElementPixel, createButtonElementForm);
 }
 
 createForm();
 
 // CREATION DE LA GRILLE
-const mainElement = document.querySelector('main');
+
 
 // VALEUR DES INPUTS
 const form = document.querySelector('form');
@@ -53,14 +55,31 @@ form.addEventListener('submit', (e) => {
     recreateGrid(infoGrid);
 });
 
+
+// Fonction pour créer la section contenant la grille
+
+const sectionContainerGrid = () => {
+    const createSectionGrid = document.createElement('section');
+    createSectionGrid.className = ('contenaire-grille');
+    const mainElement = document.querySelector('main');
+
+    mainElement.append(createSectionGrid);
+
+}
+
+sectionContainerGrid()
+
 // Créer la grille avec les valeurs
 const recreateGrid = (infoGrid) => {
-    mainElement.innerHTML = ''; 
+
+    const sectionGridElement = document.querySelector('.contenaire-grille');
+
+    sectionGridElement.innerHTML = ''; 
 
     for (let i = 0; i < infoGrid.column; i++) {
         const sectionElementGrid = document.createElement('section');
         sectionElementGrid.className = 'grille';
-        mainElement.append(sectionElementGrid);
+        sectionGridElement.append(sectionElementGrid);
 
         for (let j = 0; j < infoGrid.column; j++) {
             const divElementPixel = document.createElement('div');
