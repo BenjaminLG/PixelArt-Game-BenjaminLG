@@ -97,6 +97,9 @@ const recreateGrid = (infoGrid) => {
     
     sectionGridElement.innerHTML = ''; 
 
+    const paragrapheElementSize = document.querySelector('.exemple-taille');
+    paragrapheElementSize.classList.add('none');
+
     const grilleHTMLSections = document.querySelectorAll('.grilleHTML');
     grilleHTMLSections.forEach((section) => {
         section.classList.add('none');
@@ -115,9 +118,6 @@ const recreateGrid = (infoGrid) => {
             sectionElementGrid.append(divElementPixel);
         }
     }
-
-
-
 
     changeColor();
 }
