@@ -105,7 +105,7 @@ input:focus {
     align-items: center;
 }
 
-.grille{
+.grille, .grilleHTML{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -113,9 +113,19 @@ input:focus {
     margin-top: 15px;
 }
 
+.grilleHTML{
+    margin: 20px 0px;
+}
+
+.grille-none {
+    display: none;
+}
+
 .grille__pixels{
     background-color: beige;
     border: solid 1px black;
+    width: 20px;
+    height: 20px;
 }
 
 .color-pixel{

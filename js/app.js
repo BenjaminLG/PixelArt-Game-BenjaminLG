@@ -28,8 +28,6 @@ createForm();
 
 // CREATION DE LA GRILLE
 
-
-// VALEUR DES INPUTS
 const form = document.querySelector('form');
 
 form.addEventListener('submit', (e) => {
@@ -64,12 +62,11 @@ const sectionContainerGrid = () => {
     const mainElement = document.querySelector('main');
 
     mainElement.append(createSectionGrid);
-
 }
 
 sectionContainerGrid()
 
-
+/* CHANGEMENT DE LA COULEUR DES PIXELS */
 
 const changeColor = () => {
     const pixelsElements = document.querySelectorAll('.grille__pixels');
@@ -81,11 +78,9 @@ const changeColor = () => {
             console.log(`La valeur de la couleur est : ${colorValue}`);
 
             if (pixelElement.classList.contains('color-pixel')) {
-                // Si le pixel a déjà la classe color-pixel, on le remet à beige
                 pixelElement.style.backgroundColor = 'beige';
                 pixelElement.classList.remove('color-pixel');
             } else {
-                // Sinon, on lui attribue la couleur sélectionnée et on ajoute la classe color-pixel
                 pixelElement.style.backgroundColor = colorValue;
                 pixelElement.classList.add('color-pixel');
             }
@@ -95,12 +90,17 @@ const changeColor = () => {
 
 
 
-// Créer la grille avec les valeurs
+// Créer la grille avec les valeurs des inputs 
 const recreateGrid = (infoGrid) => {
 
     const sectionGridElement = document.querySelector('.contenaire-grille');
-
+    
     sectionGridElement.innerHTML = ''; 
+
+    const grilleHTMLSections = document.querySelectorAll('.grilleHTML');
+    grilleHTMLSections.forEach((section) => {
+        section.classList.add('none');
+    });
 
     for (let i = 0; i < infoGrid.column; i++) {
         const sectionElementGrid = document.createElement('section');
@@ -116,30 +116,11 @@ const recreateGrid = (infoGrid) => {
         }
     }
 
-    
+
+
+
     changeColor();
 }
 
-// Fonction du changement de couleur au clic
-// const changeColor = () => {
-//     const pixelsElements = document.querySelectorAll('.grille__pixels');
-//     const inputElementColor = document.querySelector('.color-container__color');
-
-//     inputElementColor.addEventListener('input', () => {
-//         const colorValue = inputElementColor.value;
-//         console.log(`La valeur de la couleur est : ${colorValue}`);
-
-//         pixelsElements.forEach((pixelElement) => {
-//             pixelElement.style.backgroundColor = colorValue;
-//         });
-//     });
-
-//     pixelsElements.forEach((pixelElement) => {
-//         pixelElement.addEventListener('click', () => {
-//             console.log("Le click fonctionne");
-//             pixelElement.classList.toggle('color-pixel');
-//         });
-//     });
-// }
 
 
