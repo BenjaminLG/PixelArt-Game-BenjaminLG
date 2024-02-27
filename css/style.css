@@ -100,6 +100,12 @@ input:focus {
 
 /* GRILLE */
 
+.contenaire-grille {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .grille{
     display: flex;
     flex-direction: column;
