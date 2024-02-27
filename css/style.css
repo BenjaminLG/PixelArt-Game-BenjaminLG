@@ -97,7 +97,6 @@ input:focus {
     }
 }
 
-
 /* GRILLE */
 
 .contenaire-grille {
@@ -119,8 +118,8 @@ input:focus {
     border: solid 1px black;
 }
 
-.red-pixel{
-    background-color: rgb(184, 6, 6);
+.color-pixel{
+    background-color: #fad345;
 }
 
 /* Choix de la couleur */

@@ -97,10 +97,21 @@ const recreateGrid = (infoGrid) => {
 // Fonction du changement de couleur au clic
 const changeColor = () => {
     const pixelsElements = document.querySelectorAll('.grille__pixels');
+    const inputElementColor = document.querySelector('.color-container__color');
+
+    inputElementColor.addEventListener('input', () => {
+        const colorValue = inputElementColor.value;
+        console.log(`La valeur de la couleur est : ${colorValue}`);
+
+        pixelsElements.forEach((pixelElement) => {
+            pixelElement.style.backgroundColor = colorValue;
+        });
+    });
+
     pixelsElements.forEach((pixelElement) => {
         pixelElement.addEventListener('click', () => {
             console.log("Le click fonctionne");
-            pixelElement.classList.toggle('red-pixel');
+            pixelElement.classList.toggle('color-pixel');
         });
     });
 }
