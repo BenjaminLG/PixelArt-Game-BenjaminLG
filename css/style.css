@@ -89,8 +89,6 @@ input:focus {
 }
 
 .grille__pixels{
-    width: 20px;
-    height: 20px;
     background-color: beige;
     border: solid 1px black;
 }
