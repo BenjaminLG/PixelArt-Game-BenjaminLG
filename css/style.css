@@ -1,7 +1,7 @@
 /* GLOBAL */
 @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Micro+5&display=swap');
 
-:root {
+/* :root {
     --bg-header: rgb(56, 56, 236);  
     --bg-body:rgb(140, 92, 252);
     --color-h1:rgb(252, 235, 255);
@@ -16,6 +16,25 @@
     --color-text-strong:rgb(252, 235, 255);
     --bg-container-color:rgb(56, 56, 236);
     --color-h2:rgb(252, 235, 255);
+    --bg-pixel:rgb(245, 245, 220);
+    --border-pixel:rgb(0, 0, 0);
+  } */
+
+  :root {
+    --bg-header: rgb(38, 43, 68);  
+    --bg-body:rgb(51, 60, 87);
+    --color-h1:rgb(64, 165, 244);
+    --color-bg-button:rgb(51, 60, 87);
+    --color-border-button:rgb(252, 235, 255);
+    --box-shadow:rgb(0, 0, 0);
+    --color-text-button:rgb(252, 235, 255);
+    --color-bg-hover:rgb(86, 95, 124);
+    --color-text-input:rgb(38, 43, 68);
+    --color-text-placeholder:rgb(51, 60, 87);
+    --color-text-exemple:rgb(245, 245, 220);
+    --color-text-strong:rgb(64, 165, 244);
+    --bg-container-color:rgb(38, 43, 68);
+    --color-h2:rgb(245, 245, 220);
     --bg-pixel:rgb(245, 245, 220);
     --border-pixel:rgb(0, 0, 0);
   }
@@ -149,6 +168,7 @@ input:focus {
     font-size: 18px;
     margin-top: 30px;
     text-align: center;
+    color: var(--color-text-exemple);
 }
 
 strong{
