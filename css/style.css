@@ -1,6 +1,25 @@
 /* GLOBAL */
 @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Micro+5&display=swap');
 
+:root {
+    --bg-header: rgb(56, 56, 236);  
+    --bg-body:rgb(140, 92, 252);
+    --color-h1:rgb(252, 235, 255);
+    --color-bg-button:rgb(140, 92, 252);
+    --color-border-button:rgb(252, 235, 255);
+    --box-shadow:rgb(0, 0, 0);
+    --color-text-button:rgb(252, 235, 255);
+    --color-bg-hover:rgb(181, 149, 255);
+    --color-text-input:rgb(56, 56, 236);
+    --color-text-placeholder:rgb(140, 92, 252);
+    --color-text-exemple:rgb(0, 0, 0);
+    --color-text-strong:rgb(252, 235, 255);
+    --bg-container-color:rgb(56, 56, 236);
+    --color-h2:rgb(252, 235, 255);
+    --bg-pixel:rgb(245, 245, 220);
+    --border-pixel:rgb(0, 0, 0);
+  }
+
 * {
     box-sizing: border-box;
   }
@@ -9,7 +28,7 @@ body{
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-color: rgb(140, 92, 252);
+    background-color: var(--bg-body);
 }
 
 header{
@@ -17,8 +36,8 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(56, 56, 236);
-    box-shadow: black 0px 0px 10px 2px;
+    background-color: var(--bg-header);
+    box-shadow: var(--box-shadow) 0px 0px 10px 2px;
 }
 
 main{
@@ -37,7 +56,7 @@ h1{
 
 h1 a{
     text-decoration: none;
-    color: rgb(252, 235, 255);
+    color: var(--color-h1);
 }
 
 h2{
@@ -46,7 +65,7 @@ h2{
     writing-mode: vertical-rl;
     text-orientation: upright;
     text-transform: capitalize;
-    color: rgb(252, 235, 255);
+    color: var(--color-h2);
 }
 
 /* FORMULAIRE */
@@ -63,15 +82,15 @@ h2{
     height: 50px;
     font-size: 18px;
     font-weight: bold;
-    color: rgb(56, 56, 236);
+    color: var(--color-text-input);
     width: 150px;
     text-align: center;
-    border: solid 3px white;
+    border: solid 3px var(--color-border-button);
 }
 
 .formulaire__grille::placeholder, .formulaire__pixel::placeholder {
     font-size: 18px;
-    color: rgb(140, 92, 252);
+    color: var(--color-text-placeholder);
     font-weight: normal;
     text-align: start;
 }
@@ -86,19 +105,19 @@ input:focus {
 }
 
 .formulaire__bouton{
-    background-color: rgb(140, 92, 252);
+    background-color: var(--color-bg-button);
     border-radius: 0px 8px 8px 0px;
-    color: azure;
+    color: var(--color-text-button);
     font-weight: bold;
     font-size: 18px;
     text-align: center;
     padding: 12px 25px;
-    border: solid 3px white;
+    border: solid 3px var(--color-border-button);
     transition: 500ms ease-in-out;
 
     &:hover{
         transition: 500ms ease-in-out;
-        background-color: rgb(181, 149, 255);
+        background-color: var(--color-bg-hover);
     }
 }
 
@@ -134,7 +153,7 @@ input:focus {
 
 strong{
     font-size: 22px;
-    color: #ffffff;
+    color: var(--color-text-strong);
 }
 
 .grilleHTML{
@@ -146,8 +165,8 @@ strong{
 }
 
 .grille__pixels{
-    background-color: beige;
-    border: solid 1px black;
+    background-color: var(--bg-pixel);
+    border: solid 1px var(--border-pixel);
     width: 20px;
     height: 20px;
 }
@@ -163,14 +182,14 @@ strong{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(56, 56, 236);
+    background-color: var(--bg-container-color);
     position: fixed;
     right: 0px;
     top: 40%;
     gap: 10px;
     padding: 10px 5px;
     border-radius: 10px 0px 0px 10px;
-    box-shadow: black 0px 5px 10px;   
+    box-shadow: var(--box-shadow) 0px 5px 10px;   
 }
 
 input[type="color"] {
@@ -183,7 +202,7 @@ input[type="color"] {
     border: 0;
     cursor: pointer;
     padding: 0;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--color-border-button);
   }
   
 
