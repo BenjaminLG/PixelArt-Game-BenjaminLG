@@ -187,8 +187,8 @@ strong{
 .grille__pixels{
     background-color: var(--bg-pixel);
     border: solid 1px var(--border-pixel);
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
 }
 
 .color-pixel{
@@ -230,8 +230,8 @@ input[type="color"] {
 
   .olive-fonce, .vert-clair, .vert-fonce, .vert-pomme, .noire{
     border: solid 1px black;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
   }
 
   .olive-fonce{
@@ -253,3 +253,67 @@ input[type="color"] {
   .noire{
     background-color: rgb(0, 0, 0);
   }
+
+
+
+  /* Smartphone */
+
+@media screen and (max-width: 767px) {
+
+    .formulaire__grille, .formulaire__pixel {
+        height: 30px;
+        font-size: 12px;
+        width: 100px;
+    }
+
+    .formulaire__grille::placeholder, .formulaire__pixel::placeholder {
+        font-size: 12px;
+    }
+
+    .formulaire__bouton{
+        font-size: 12px;
+        padding: 6px 18px;
+    }
+
+    .exemple-taille{
+        font-size: 12px;
+        padding: 0px 50px;
+    }
+    
+    strong{
+        font-size: 18px;
+    }
+
+    .grille__pixels{
+        width: 15px;
+        height: 15px;
+    }
+
+    .olive-fonce, .vert-clair, .vert-fonce, .vert-pomme, .noire{
+        width: 15px;
+        height: 15px;
+    }
+
+    .color-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--bg-container-color);
+        position: fixed;
+        right: 0px;
+        top: 20%;
+        gap: 10px;
+        padding: 10px 5px; 
+    }
+
+    .color-container__title{
+        font-size: 12px;
+    }
+    
+    input[type="color"] {
+        width: 30px;
+        height: 30px;
+      }
+
+}

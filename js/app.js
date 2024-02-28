@@ -123,4 +123,21 @@ const recreateGrid = (infoGrid) => {
 }
 
 
+//FOOTER
 
+const yearFooter = () => {
+
+    const today = new Date();
+    const year = today.getFullYear();
+
+    const footerElement = document.querySelector('footer');
+    const createParagrapheFooter = document.createElement('p');
+
+    createParagrapheFooter.className = 'footer-text';
+    createParagrapheFooter.textContent = `@ ${year} Benjamin Le Guellec`;
+
+    footerElement.append(createParagrapheFooter);
+    
+}
+
+yearFooter();
